@@ -19,7 +19,7 @@
             <nav class="nav">
             <a class="logo" href="./index.html">Web<span class="logo-1">Studio</span></a>
             <ul class="nav-links">
-                <li class="nav-link"><a  href="./index.html" class="active">Студия</a></li>
+                <li class="nav-link"><a href="./index.html" class="active">Студия</a></li>
                 <li class="nav-link"><a href="./portfolio.html">Портфолио</a></li>
                 <li class="nav-link"><a href="#address">Контакты</a></li>
             </ul>
@@ -353,7 +353,11 @@
                 <form class="subscribe-form" >
                     <label for="email"></label>
                     <input type="email" class="sub-form" name="email" id="email" placeholder="E-mail" required>
-                    <button class="sub-button button" type="submit" >Подписаться</button>
+                    <button class="sub-button button" type="submit" >Подписаться
+                        <svg class="send-icon" width="20px" height="20px">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -367,17 +371,59 @@
             </svg>
         </button>
 
-        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        
         <form class="info-form">
-<label for="name" class="form-label text">Имя</label>
-<input type="text" class="form-input" id="name"  required >
-<label for="tel" class="form-label text">Телефон</label>
-<input type="tel" class="form-input" id="tel" required >
-<label for="name" class="form-label text">Почта</label>
-<input type="e-mail" class="form-input" id="e-mail" required >
-<label for="comment" class="form-label text">Комментарий</label>
-<textarea name="comment" class="comment" id="comment" ></textarea>
+            <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+           
+            <label  class="form-label">
+                Имя
+            <span class="form-field">
+            <input type="text" class="form-input" name="user-name" required minlength="2"  pattern="[a-zA-Zа-яёА-ЯЁ]+" title="Введите символы кириллицы или латинского алфавита">
+            <svg class="icon" width="18px" height="18px">
+                <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+            </span>
+            </label>
 
+           
+            <label  class="form-label">
+                Телефон
+            <span class="form-field">
+            <input type="tel" class="form-input" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="096-111-11-11"
+             >
+             <svg class="icon" width="18px" height="18px">
+                 <use href="./images/icons.svg#icon-phone-modal"></use>
+             </svg>
+            </span>
+            </label>
+
+            
+            <label class="form-label">
+                Почта
+            <span class="form-field">
+            <input type="email" class="form-input" name="email"  required >
+            <svg class="icon" width="18px" height="18px">
+                <use href="./images/icons.svg#icon-email-modal"></use>
+            </svg>
+            </span>
+            </label>
+
+            <label  class="form-label">
+                Комментарий
+            <textarea name="comment" class="comment"  placeholder="Введите текст"></textarea>
+            </label>
+            
+
+            <input type="checkbox" class="checkbox hidden" name="agree" id="agree" required>
+           <label for="agree" class="checkbox-label text">Соглашаюсь с рассылкой и принимаю &nbsp; <a href=""
+    class="agreement text">Условия договора</a> </label>
+            
+      
+            <button type="submit" class="send-button button">Отправить</button>
+                    
+            
+
+           
 
         </form>
         </div>
